@@ -97,7 +97,7 @@ public class OknoGlowne extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("v20150123");
+        jLabel1.setText("v2020.1.24");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,6 +149,7 @@ public class OknoGlowne extends javax.swing.JFrame {
         String gdzieOtworzyl = null;
         
         // czytaj klaudiusz i sie ucz!!!
+        // 2020-01-24 już sporo potrafię :) ale uczę się dalej
         // 2015-01-23 dodałem uzupełnienie roku w polu rok. Biorę sysdate i odejmuję jeden rok
         // 2014-02-06 dodałem poprawkę dla możliwości zamiany na dyskach sieciowych
         //
@@ -197,9 +198,9 @@ public class OknoGlowne extends javax.swing.JFrame {
                            pesel = tekst.substring(11, 22);
                        }*/
                        
-                       if ( i == 18)
+                       if ( i == 17)
                        {
-                           pesel = tekst.replace("<PESEL>","").replace("</PESEL>","").replace("<NIP>","").replace("</NIP>","");
+                           pesel = tekst.replace("<etd:PESEL>","").replace("</etd:PESEL>","").replace("<etd:NIP>","").replace("</etd:NIP>","");
                        }
                        
                        msg = msg + tekst + '\n';
