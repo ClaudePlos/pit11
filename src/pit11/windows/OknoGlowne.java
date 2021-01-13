@@ -97,7 +97,7 @@ public class OknoGlowne extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("v2020.1.24");
+        jLabel1.setText("v2021.1.13");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -200,7 +200,10 @@ public class OknoGlowne extends javax.swing.JFrame {
                        
                        if ( i == 17)
                        {
-                           pesel = tekst.replace("<etd:PESEL>","").replace("</etd:PESEL>","").replace("<etd:NIP>","").replace("</etd:NIP>","");
+                           pesel = tekst.replace("<etd:PESEL xmlns:etd=\"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/07/06/eD/DefinicjeTypy/\">","")
+                                   .replace("</etd:PESEL>","")
+                                   .replace("<etd:NIP xmlns:etd=\"http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2020/07/06/eD/DefinicjeTypy/\">","")
+                                   .replace("</etd:NIP>","");
                        }
                        
                        msg = msg + tekst + '\n';
